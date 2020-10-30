@@ -14,7 +14,7 @@ If we have a directory of JSON files, we  can loop through the files and delete 
 <pre><code>ls -la *.json | awk '{print $9}' | while read line ; do sed -i '/_index/d' $line ; done</code></pre>
 
 Now we are ready to ingest the JSON files using Logstash.  Please see the Logstash configuration file at: 
-![](https://github.com/threathunternotebook/Wireless-ElasticStack-Ingest/blob/main/logstash_wlan.conf)
+![Logstash Configuration](https://github.com/threathunternotebook/Wireless-ElasticStack-Ingest/blob/main/logstash_wlan.conf)
 
 
 Enjoy!
