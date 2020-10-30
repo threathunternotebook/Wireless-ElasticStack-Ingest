@@ -1,0 +1,17 @@
+# Elasticsearch template to map geolocation points to a geo_point data type
+{
+  "index_patterns": ["wifi-pcap*"],
+  "template": {
+    "settings": {
+      "number_of_shards": 2,
+      "number_of_replicas": 1
+    },
+    "mappings": {
+      "properties": {
+        "location": {
+          "type": "geo_point"
+        }
+       }
+     }
+   }
+ }
