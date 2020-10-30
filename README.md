@@ -15,3 +15,6 @@ If we have a directory of JSON files, we  can loop through the files and delete 
 
 Now we are ready to ingest the JSON files using Logstash.  Please see the Logstash configuration file at: 
 ![](https://github.com/threathunternotebook/Wireless-ElasticStack-Ingest/blob/main/logstash_wlan.conf)
+
+
+Enjoy!
