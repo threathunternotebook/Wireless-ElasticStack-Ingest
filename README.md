@@ -18,5 +18,8 @@ Now we are ready to ingest the JSON files using Logstash.  Please see the Logsta
 
 If you are using PCAP files captured with Kismet and GPS data, you need to to send a geolocation template to Elasticsearch.  You can fine a template at ![wifi Geolocation Template](https://github.com/threathunternotebook/Wireless-ElasticStack-Ingest/blob/main/wifi-template.json)
 
+You can send the template to Elasticsearch using the example below
+<pre><code>curl -H 'Content-Type: application/json' -XPUT http://localhost:9200/_index_template/wifi-pcap -d @wifi-template.json</code></pre>
+
 
 Enjoy!
