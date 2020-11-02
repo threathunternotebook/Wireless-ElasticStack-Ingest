@@ -8,7 +8,7 @@ If we have a directory of 802.11 wireless PCAPs, we can loop through the PCAPs a
 <pre><code>ls -la *.cap | awk '{print $9}' | while read line ; do sudo tshark -T ek -r $line >> wifi_$line.json; done</code></pre>
 
 To ensure that we can ingest the JSON file for Elastic Stack versions 7+, we need to strip out the line containing illegal fields in the JSON file
-<pre><code>sed -i '/_index/d' "pcap_file"</code></pre>
+<pre><code>sed -i '/"index"/d' "pcap_file"</code></pre>
 
 If we have a directory of JSON files, we  can loop through the files and delete the line containing the illegal fields in the JSON file
 <pre><code>ls -la *.json | awk '{print $9}' | while read line ; do sed -i '/_index/d' $line ; done</code></pre>
