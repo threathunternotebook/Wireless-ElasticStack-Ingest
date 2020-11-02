@@ -16,5 +16,7 @@ If we have a directory of JSON files, we  can loop through the files and delete 
 Now we are ready to ingest the JSON files using Logstash.  Please see the Logstash configuration file at: 
 ![Logstash Configuration](https://github.com/threathunternotebook/Wireless-ElasticStack-Ingest/blob/main/logstash_wlan.conf)
 
+If you are using PCAP files captured with Kismet and GPS data, you need to to send a geolocation template to Elasticsearch.  You can fine a template at ![wifi Geolocation Template](https://github.com/threathunternotebook/Wireless-ElasticStack-Ingest/blob/main/wifi-template.json)
+
 
 Enjoy!
